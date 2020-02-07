@@ -1,151 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="page">
-    <header class="page-head">
-      <div class="rd-navbar-wrap">
-        <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="53px" data-lg-stick-up-offset="53px" data-md-stick-up="true" data-lg-stick-up="true" class="rd-navbar rd-navbar-corporate-dark">
-          <div class="rd-navbar-inner">
-            <div class="rd-navbar-aside">
-              <div data-custom-toggle=".rd-navbar-aside" data-custom-toggle-disable-on-blur="true" class="rd-navbar-aside-toggle"><span></span></div>
-              <div class="rd-navbar-aside-content context-dark">
-                <ul class="rd-navbar-aside-group list-units">
-                  <li>
-                    <div class="unit unit-horizontal unit-spacing-xs">
-                      <div class="unit-left"><span class="icon icon-xxs-small icon-primary material-icons-place icon-shift-1 offset-top-2"></span></div>
-                      <div class="unit-body"><a href="#" class="link-white-v2 reveal-inline">2381 Rosecrans Ave,  CA 90245. USA</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit unit-horizontal unit-spacing-xs">
-                      <div class="unit-left"><span class="icon icon-xxs icon-primary fa-clock-o offset-top-2"></span></div>
-                      <div class="unit-body">
-                        <p class="text-white">Mon – Sat: 9:00am–18:00pm. Sunday CLOSED</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit unit-horizontal unit-spacing-xs">
-                      <div class="unit-left"><span class="icon icon-xxs icon-primary material-icons-phone icon-shift-2"></span></div>
-                      <div class="unit-body"><a href="callto:#" class="link-white-v2">1900-2345-234</a></div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="rd-navbar-aside-group">
-                  <ul class="list-inline list-inline-reset">
-                    <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-facebook"></a></li>
-                    <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-twitter"></a></li>
-                    <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-google-plus"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="rd-navbar-group rd-navbar-search-wrap">
-              <div class="rd-navbar-panel">
-                <button data-custom-toggle=".rd-navbar-nav-wrap" data-custom-toggle-disable-on-blur="true" class="rd-navbar-toggle"><span></span></button>
-                <a href="index.html" class="rd-navbar-brand brand"><img src="{% static 'images/logo-135x34.png' %}" alt="logo" width="170" height="34"/></a> </div>
-              <div class="rd-navbar-nav-wrap">
-                <div class="rd-navbar-nav-inner">
-                  <div class="rd-navbar-search">
-                    <form action="search-results.html" method="GET" data-search-live="rd-search-results-live" class="rd-search">
-                      <div class="form-group">
-                        <label for="rd-search-form-input" class="form-label">Search...</label>
-                        <input id="rd-search-form-input" type="text" name="s" autocomplete="off" class="form-control">
-                        <div id="rd-search-results-live" class="rd-search-results-live"></div>
-                      </div>
-                      <button type="submit" class="rd-search-submit"></button>
-                    </form>
-                    <button data-rd-navbar-toggle=".rd-navbar-search, .rd-navbar-search-wrap" class="rd-navbar-search-toggle"></button>
-                  </div>
-                  <ul class="rd-navbar-nav">
-                    <li class="active"><a href="index.html">Home</a> </li>
-                    <li><a href="about-us.html">About Us</a> </li>
-                    <li><a href="services.html">Services</a> </li>
-                    <li><a href="#">Blog</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="blog-classic.html">Classic blog</a> </li>
-                        <li><a href="blog-grid.html">Grid blog</a> </li>
-                        <li><a href="blog-line.html">Blog Line</a> </li>
-                        <li><a href="blog-masonry.html">Masonry Blog</a> </li>
-                        <li><a href="blog-post.html">Blog post</a> </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Pages</a>
-                      <ul class="rd-navbar-megamenu">
-                        <li>
-                          <h6 class="rd-megamenu-header">Gallery</h6>
-                          <ul class="rd-navbar-list">
-                            <li><a href="gallery-grid.html">Grid gallery</a></li>
-                            <li><a href="gallery-masonry.html">Masonry gallery</a></li>
-                            <li><a href="gallery-cobbles.html">Cobbles gallery</a></li>
-                            <li><a href="gallery-item.html">Gallery item</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h6 class="rd-megamenu-header">Pages</h6>
-                          <ul class="rd-navbar-list">
-                            <li><a href="appointment.html">Make an Appointment</a></li>
-                            <li><a href="clients.html">Clients</a></li>
-                            <li><a href="clients-testimonials.html">Clients testimonials</a></li>
-                            <li><a href="our-team.html">Our team</a></li>
-                            <li><a href="team-member-profile.html">Team member profile</a></li>
-                            <li><a href="careers.html">Careers</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h6 class="rd-megamenu-header">Extras</h6>
-                          <ul class="rd-navbar-list">
-                            <li><a href="404-page.html">404 Page</a></li>
-                            <li><a href="503-page.html">503 Page</a></li>
-                            <li><a href="maintenance.html">Maintenance</a></li>
-                            <li><a href="coming-soon.html">Coming soon</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="register.html">Register</a></li>
-                            <li><a href="search-results.html">Search results</a></li>
-                            <li><a href="privacy-policy.html">Terms of use</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <h6 class="rd-megamenu-header">Components</h6>
-                          <ul class="rd-navbar-list">
-                            <li><a href="accordion.html">Accordion</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="grid-system.html">Grid</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="icon-lists.html">Icon lists</a></li>
-                            <li><a href="progress-bars.html">Progress bars</a></li>
-                            <li><a href="tabs.html">Tabs</a></li>
-                            <li><a href="tables.html">Table styles</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="contact-us.html">Contacts</a> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+      {% include "./include/navbar.html" %}
+    
     <main class="page-content">
       <section>
         <div data-loop="false" data-autoplay="false" data-simulate-touch="true" class="swiper-container swiper-slider swiper-variant-1 bg-gray-base">
           <div class="swiper-wrapper text-center">
-            <div data-slide-bg="{% static 'images/1920x900.jpg' %}" class="swiper-slide">
+            <div data-slide-bg="{% static 'images/slider4.jpg' %}" class="swiper-slide">
               <div class="swiper-slide-caption">
                 <div class="shell">
                   <div class="range range-xs-center">
                     <div class="cell-sm-11 cell-md-10">
-                      <div data-caption-animate="fadeInUp" data-caption-delay="0s" class="text-white text-uppercase jumbotron-custom border-modern">The Business </div>
+                      <div data-caption-animate="fadeInUp" data-caption-delay="0s" class="text-white text-uppercase jumbotron-custom border-modern">Enenu Wears </div>
                       <div data-caption-animate="fadeInUp" data-caption-delay="450s" class="offset-sm-top-5">
-                        <p class="text-big-22  veil reveal-sm-inline-block">We look forward to getting to know you and to helping you <br>
-                          take your company to new heights!</p>
+                        <p class="text-big-22  veil reveal-sm-inline-block">
+                          We believe in bringing you the luxury of having high quality and fashionable wears at a fair price
+                        </p>
                       </div>
                       <div data-caption-animate="fadeInUp" data-caption-delay="550s" class="offset-top-27"><a href="appointment.html" class="btn btn-primary">make An Appointment</a></div>
                     </div>
@@ -153,14 +24,16 @@
                 </div>
               </div>
             </div>
-            <div data-slide-bg="{% static 'images/1920x900.jpg' %}" class="swiper-slide">
+            <div data-slide-bg="{% static 'images/slider3.jpg' %}" class="swiper-slide">
               <div class="swiper-slide-caption">
                 <div class="shell">
                   <div class="range range-xs-center">
                     <div class="cell-sm-11 cell-md-10 cell-lg-12">
-                      <div data-caption-animate="fadeInUp" data-caption-delay="0s" class="text-white text-uppercase jumbotron-custom border-modern">Experience great service</div>
+                      <div data-caption-animate="fadeInUp" data-caption-delay="0s" class="text-white text-uppercase jumbotron-custom border-modern">Enenu</div>
                       <div data-caption-animate="fadeInUp" data-caption-delay="450s" class="offset-sm-top-5">
-                        <p class="text-big-19 text-white veil reveal-sm-inline-block">Optimize audit costs using our years of experience</p>
+                        <p class="text-big-19 text-white veil reveal-sm-inline-block">
+                        PhotoGraphy                 
+       </p>
                       </div>
                       <div data-caption-animate="fadeInUp" data-caption-delay="550s" class="offset-top-27"><a href="appointment.html" class="btn btn-primary">make An Appointment</a></div>
                     </div>
@@ -255,34 +128,6 @@
                 <p class="text-gray-base">Attestation services that we provide, include the process of independent review of the data validity audited by an accountant.</p>
               </div>
               <a href="#" class="btn btn-icon-only btn-icon-single btn-icon-default"><span class="icon icon-sm material-icons-arrow_forward"></span></a> </article>
-          </div>
-        </div>
-      </section>
-      <section class="section-with-counters bg-primary text-center">
-        <div class="shell bg-cape-cod context-dark section-60 section-md-90">
-          <h4 class="text-rolling-stone text-bold text-uppercase">Looking for</h4>
-          <h3 class="offset-top-2"><span class="text-thin">a First-Class</span> auditor? </h3>
-          <p class="text-white">With a lot of experience in audit, hiring us will become a proper solution for your business!</p>
-          <div class="range offset-top-60 list-md-dashed">
-            <div class="cell-sm-3">
-              <div class="h1 small counter-bold counter">850</div>
-              <div class="offset-top-0 text-bold text-white text-uppercase">Trusted Clients</div>
-            </div>
-            <div class="cell-sm-3 offset-top-40 offset-sm-top-0">
-              <div class="h1 small counter-bold counter">18</div>
-              <div class="offset-top-0 text-bold text-white text-uppercase">Awards</div>
-            </div>
-            <div class="cell-sm-3 offset-top-40 offset-sm-top-0">
-              <div class="h1 small counter-bold counter">21</div>
-              <div class="offset-top-0 text-bold text-white text-uppercase">Years of Experience</div>
-            </div>
-            <div class="cell-sm-3 offset-top-40 offset-sm-top-0">
-              <div class="h1 small counter-bold counter">16</div>
-              <div class="offset-top-0 text-bold text-white text-uppercase">Experts</div>
-            </div>
-          </div>
-          <div class="offset-top-50 offset-md-top-75 inset-xs-left-60 inset-xs-right-60">
-            <div class="reveal-sm-flex range-sm-center range-sm-middle"><a href="appointment.html" class="btn btn-rect btn-primary reveal-block reveal-sm-inline-block">Make an Appointment</a><span class="text-italic text-white inset-sm-left-20 inset-sm-right-20 reveal-block reveal-sm-inline-block text-big-18">or</span><a href="services.html" style="min-width:236px;" class="btn btn-rect btn-white-outline offset-top-0 reveal-block reveal-sm-inline-block">See All services</a></div>
           </div>
         </div>
       </section>
@@ -503,217 +348,11 @@
           </div>
         </div>
       </section>
-      <section class="section-50 section-sm-90 section-sm-bottom-100">
-        <div class="shell text-center">
-          <h3>Latest <span class="text-thin">News</span></h3>
-          <div class="range range-xs-center offset-top-40">
-            <div class="cell-xs-8 cell-sm-7 cell-md-4">
-              <div class="post-boxed reveal-lg-inline-block">
-                <div class="post-boxed-img-wrap"><a href="blog-post.html"><img src="images/322x219.jpg" alt="" width="322" height="219"/></a></div>
-                <div class="post-boxed-caption">
-                  <div class="post-boxed-title text-bold"><a href="blog-post.html">Presentations that Impress Your Audit Committee</a></div>
-                  <div class="offset-top-5">
-                    <ul class="list-inline list-inline-dashed text-uppercase">
-                      <li>JUNE 14, 2016</li>
-                      <li><span>by <a href="#" class="text-primary">Sam Kromstain</a></span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cell-xs-8 cell-sm-7 cell-md-4 offset-top-40 offset-md-top-0">
-              <div class="post-boxed reveal-lg-inline-block">
-                <div class="post-boxed-img-wrap"><a href="blog-post.html"><img src="images/322x219.jpg" alt="" width="322" height="219"/></a></div>
-                <div class="post-boxed-caption">
-                  <div class="post-boxed-title text-bold"><a href="blog-post.html">Top 3 Concerns When Choosing a Cloud Vendor</a></div>
-                  <div class="offset-top-5">
-                    <ul class="list-inline list-inline-dashed text-uppercase">
-                      <li>JUNE 20, 2016</li>
-                      <li><span>by <a href="#" class="text-primary">Vanessa Ives</a></span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cell-xs-8 cell-sm-7 cell-md-4 offset-top-40 offset-md-top-0">
-              <div class="post-boxed reveal-lg-inline-block">
-                <div class="post-boxed-img-wrap"><a href="blog-post.html"><img src="images/322x219.jpg" alt="" width="322" height="219"/></a></div>
-                <div class="post-boxed-caption">
-                  <div class="post-boxed-title text-bold"><a href="blog-post.html">Audit Data Analytics: Why Auditors Should Care</a></div>
-                  <div class="offset-top-5">
-                    <ul class="list-inline list-inline-dashed text-uppercase">
-                      <li>JUNE 23, 2016</li>
-                      <li><span>by <a href="#" class="text-primary">Amanda Smith</a></span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <div class="rd-google-map">
         <div class="overlay rd-google-map__model" onClick="style.pointerEvents='none'"></div>
         <iframe  class="rd-google-map__model" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8404068987!2d-74.2581973675357!3d40.70583158554698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zVGjDoG5oIHBo4buRIE5ldyBZb3JrLCBUaeG7g3UgYmFuZyBOZXcgWW9yaw!5e0!3m2!1svi!2s!4v1480613299202" allowfullscreen></iframe>
       </div>
     </main>
-    <footer class="page-foot bg-cape-cod context-dark">
-      <section class="section-40 section-sm-75">
-        <div class="shell">
-          <div class="range range-xs-center">
-            <div class="cell-xs-9 cell-sm-11 cell-lg-12">
-              <div class="range">
-                <div class="cell-sm-6 cell-md-10 cell-lg-3">
-                  <div style="max-width: 510px;" class="inset-lg-right-20"><a href="index.html" class="brand brand-inverse"><img src="images/logo-light-135x34.png" alt="logo" width="135" height="34"/></a>
-                    <p class="offset-top-22 text-dusty-gray">Consulting delivers environment through which high-quality firms from diverse backgrounds can work together toward their own common goals.</p>
-                    <a href="contact-us.html" class="text-small-16 text-medium offset-top-15">Free Consultation</a> </div>
-                </div>
-                <div class="cell-sm-6 cell-md-4 cell-lg-3 offset-top-50 offset-sm-top-0 offset-md-top-50 offset-lg-top-0">
-                  <h6 class="text-small-16 text-uppercase">Recent Posts</h6>
-                  <div class="offset-top-22 offset-md-top-30">
-                    <article class="post post-preview post-preview-inverse offset-top-22"><a href="blog-post.html">
-                      <div class="unit unit-horizontal unit-spacing-lg">
-                        <div class="unit-left">
-                          <figure class="post-image"><img src="images/70x70.jpg" alt="" width="70" height="70"/> </figure>
-                        </div>
-                        <div class="unit-body">
-                          <div class="post-header">
-                            <p>Top 3 Concerns Whe Choosing a Cloud Vendor</p>
-                          </div>
-                          <div class="post-meta">
-                            <ul class="list-meta">
-                              <li>
-                                <time datetime="2016-12-23">June 23, 2016</time>
-                              </li>
-                              <li>4 Comment</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      </a></article>
-                    <article class="post post-preview post-preview-inverse offset-top-22"><a href="blog-post.html">
-                      <div class="unit unit-horizontal unit-spacing-lg">
-                        <div class="unit-left">
-                          <figure class="post-image"><img src="images/70x70.jpg" alt="" width="70" height="70"/> </figure>
-                        </div>
-                        <div class="unit-body">
-                          <div class="post-header">
-                            <p>Audit Data Analytics: Why Auditors Should Care</p>
-                          </div>
-                          <div class="post-meta">
-                            <ul class="list-meta">
-                              <li>
-                                <time datetime="2016-12-23">June 20, 2016</time>
-                              </li>
-                              <li>4 Comment</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      </a></article>
-                  </div>
-                </div>
-                <div class="cell-sm-6 cell-md-4 cell-lg-3 offset-top-50 offset-lg-top-0">
-                  <h6 class="text-small-16 text-uppercase">Quick links</h6>
-                  <div style="max-width: 270px;" class="row offset-top-22 offset-md-top-30">
-                    <div class="col-xs-6">
-                      <ul class="list-marked-variant-2">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="blog-classic.html">Blog</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-xs-6">
-                      <ul class="list-marked-variant-2">
-                        <li><a href="about-us.html">About us</a></li>
-                        <li><a href="contact-us.html">Contacts</a></li>
-                        <li><a href="appointment.html">Appointment</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="cell-sm-6 cell-md-4 cell-lg-3 offset-top-50 offset-lg-top-0">
-                  <h6 class="text-small-16 text-uppercase">Contact us</h6>
-                  <address class="contact-info offset-top-22 offset-md-top-30 offset-lg-top-35 text-left">
-                  <div class="unit unit-horizontal unit-spacing-md unit-middle">
-                    <div class="unit-left"><span class="icon icon-xs icon-dusty-gray material-icons-phone"></span></div>
-                    <div class="unit-body"><a href="callto:#" class="link-white">1900-2345-234</a></div>
-                  </div>
-                  <div class="unit unit-horizontal unit-spacing-md unit-middle offset-top-15">
-                    <div class="unit-left"><span class="icon icon-xs icon-dusty-gray fa fa-envelope-o"></span></div>
-                    <div class="unit-body"><a href="#5d7e" class="link-white"><span class="__cf_email__" data-cfemail="442d2a222b042021292b282d2a2f6a2b3623">philip@gmail.com</span></a></div>
-                  </div>
-                  <div class="unit unit-horizontal unit-spacing-md offset-top-15">
-                    <div class="unit-left"><span class="icon icon-xs icon-dusty-gray material-icons-place"></span></div>
-                    <div class="unit-body"><a href="#" class="link-white reveal-inline">6036 Richmond hwy,<br>
-                      Alexandria, VA USA 22303</a></div>
-                  </div>
-                  </address>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="shell">
-        <hr class="hr bg-abbey-04">
-      </div>
-      <section class="section-35">
-        <div class="shell text-center">
-          <div class="range range-sm-reverse range-sm-justify range-sm-middle">
-            <div class="cell-sm-6 text-sm-right">
-              <div class="group-sm group-middle">
-                <p class="text-italic text-white">Follow Us:</p>
-                <ul class="list-inline list-inline-reset">
-                  <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-facebook"></a></li>
-                  <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-twitter"></a></li>
-                  <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-google-plus"></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="cell-sm-6 offset-top-15 offset-sm-top-0 text-sm-left">
-              <p class="rights text-white"><span id="copyright-year"></span><span>&nbsp;&#169;&nbsp;</span><span>Consulting.&nbsp;</span><a href="privacy-policy.html" class="link-white-v2">Privacy Policy</a> </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </footer>
-  </div>
-  <div id="form-output-global" class="snackbars"></div>
-  <div tabindex="-1" role="dialog" aria-hidden="true" class="pswp">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <div class="pswp__counter"></div>
-          <button title="Close (Esc)" class="pswp__button pswp__button--close"></button>
-          <button title="Share" class="pswp__button pswp__button--share"></button>
-          <button title="Toggle fullscreen" class="pswp__button pswp__button--fs"></button>
-          <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button>
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-        <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button>
-        <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button>
-        <div class="pswp__caption">
-          <div class="pswp__caption__cent"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+    
   
 {% endblock %}

@@ -11,10 +11,98 @@
 
 </head>
 <body>
+    <div class="page">
+
     {% block content %}
     {% endblock %}
     <script src="{% static 'js/core.min.js' %}"></script> 
     <script src="{% static 'js/script.js' %}"></script>
+    <footer class="page-foot bg-cape-cod context-dark">
+        <section class="section-40 section-sm-75">
+          <div class="shell">
+            <div class="range range-xs-center">
+              <div class="cell-xs-9 cell-sm-11 cell-lg-12">
+                <div class="range">
+                  <div class="cell-sm-6 cell-md-10 cell-lg-3">
+                    <div style="max-width: 510px;" class="inset-lg-right-20">
+                      <a href="{% url 'home'%}" class="brand brand-inverse"><img src="{% static 'images/enenulogo2.jpg' %}" alt="logo" width="135" height="34"/></a>
+                      <p class="offset-top-22 text-dusty-gray">
+                        We sell shoes, bags,  jeans, dresses, blazers,  
+                        suits, fabrics, all fashion accessories,   
+                        perfumes, hair, sports clothing and many more.
+                    </p>
+                      <a href="{% url 'contact'%}" class="text-small-16 text-medium offset-top-15">Free Consultation</a> </div>
+                  </div>
+                  <div class="cell-sm-6 cell-md-4 cell-lg-3 offset-top-50 offset-lg-top-0">
+                    <h6 class="text-small-16 text-uppercase">Quick links</h6>
+                    <div style="max-width: 270px;" class="row offset-top-22 offset-md-top-30">
+                      <div class="col-xs-6">
+                        <ul class="list-marked-variant-2">
+                          <li><a href="{% url 'home'%}">Home</a></li>
+                          <li><a href="{% url 'services'%}">Services</a></li>
+                          
+                          <li><a href="#">Blog</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-6">
+                        <ul class="list-marked-variant-2">
+                          <li><a href="{% url 'about'%}">About us</a></li>
+                          <li><a href="{% url 'contact'%}">Contacts</a></li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6 cell-md-4 cell-lg-3 offset-top-50 offset-lg-top-0">
+                    <h6 class="text-small-16 text-uppercase">Contact us</h6>
+                    <address class="contact-info offset-top-22 offset-md-top-30 offset-lg-top-35 text-left">
+                    <div class="unit unit-horizontal unit-spacing-md unit-middle">
+                      <div class="unit-left"><span class="icon icon-xs icon-dusty-gray material-icons-phone"></span></div>
+                      <div class="unit-body"><a href="callto:#" class="link-white">+2348101118476</a></div>
+                    </div>
+                    <div class="unit unit-horizontal unit-spacing-md unit-middle offset-top-15">
+                      <div class="unit-left"><span class="icon icon-xs icon-dusty-gray fa fa-envelope-o"></span></div>
+                      <div class="unit-body"><a href="#5d7e" class="link-white">
+                        <span class="__cf_email__" data-cfemail="442d2a222b042021292b282d2a2f6a2b3623">
+                          enenuwears@gmail.com</span></a></div>
+                    </div>
+                    <div class="unit unit-horizontal unit-spacing-md offset-top-15">
+                      <div class="unit-left"><span class="icon icon-xs icon-dusty-gray material-icons-place"></span></div>
+                      <div class="unit-body"><a href="#" class="link-white reveal-inline">6036 Richmond hwy,<br>
+                        Alexandria, VA USA 22303</a></div>
+                    </div>
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="shell">
+          <hr class="hr bg-abbey-04">
+        </div>
+        <section class="section-35">
+          <div class="shell text-center">
+            <div class="range range-sm-reverse range-sm-justify range-sm-middle">
+              <div class="cell-sm-6 text-sm-right">
+                <div class="group-sm group-middle">
+                  <p class="text-italic text-white">Follow Us:</p>
+                  <ul class="list-inline list-inline-reset">
+                    <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-facebook"></a></li>
+                    <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-twitter"></a></li>
+                    <li><a href="#" class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-google-plus"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cell-sm-6 offset-top-15 offset-sm-top-0 text-sm-left">
+                <p class="rights text-white"><span id="copyright-year"></span><span>&nbsp;&#169;&nbsp;</span><span>Enenu.&nbsp;</span>
+                  <a href="#" class="link-white-v2">Privacy Policy</a> </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+</div>
 
 </body>
 </html>
