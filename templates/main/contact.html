@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include "./include/navbar.html" %}
+
+<main class="page-content">
+    <!-- /home/goodness/Documents/Enenu/src/static/images/cellphone-cellular-communication-connection-263564.jpg -->
+    <section style="background-image: url(/static/images/cellphone-cellular-communication-connection-263564.jpg);" class="section-30 section-sm-40 section-md-66 section-lg-bottom-90 bg-gray-dark page-title-wrap">
+      <div class="shell">
+        <div class="page-title">
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+    </section>
+    <section class="section-60 section-sm-top-90 section-sm-bottom-100">
+      <div class="shell">
+        <div class="range range-xs-center range-md-left">
+          <div class="cell-md-7 cell-lg-6">
+            <h3>Get in <span class="text-thin">Touch</span></h3>
+            <form data-form-output="form-output-global" data-form-type="contact" method="post" action="#" class="rd-mailform form-modern offset-top-15">
+              <div class="range">
+                <div class="cell-sm-6">
+                  <div class="form-group">
+                    <input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-control">
+                    <label for="contact-name" class="form-label">Name</label>
+                  </div>
+                </div>
+                <div class="cell-sm-6 offset-top-30 offset-sm-top-0">
+                  <div class="form-group">
+                    <input id="contact-email" type="email" name="email" data-constraints="@Email @Required" class="form-control">
+                    <label for="contact-email" class="form-label">Email</label>
+                  </div>
+                </div>
+                <div class="cell-xs-12 offset-top-30">
+                  <div class="form-group">
+                    <div class="textarea-lined-wrap">
+                      <textarea id="contact-message" name="message" data-constraints="@Required" class="form-control"></textarea>
+                      <label for="contact-message" class="form-label">Message</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell-xs-8 offset-top-30 offset-xs-top-30 offset-sm-top-60">
+                  <button type="submit" class="btn btn-primary btn-block">Send</button>
+                </div>
+                <div class="cell-xs-4 offset-top-22 offset-xs-top-30 offset-sm-top-60">
+                  <button type="reset" class="btn btn-silver-outline btn-block">Reset</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="cell-lg-1 veil reveal-lg-inline-block"></div>
+          <div class="cell-md-5 cell-lg-4 offset-top-50 offset-md-top-0">
+            <div class="range">
+              <div class="cell-sm-10 cell-md-12">
+                <h3>How to <span class="text-thin">Find Us</span></h3>
+                <p class="offset-sm-top-30 text-secondary"> If you have any questions, just fill in the contact form, and we will answer you shortly. If you are living nearby, come visit us. </p>
+              </div>
+              <div class="cell-sm-6 cell-md-12 offset-top-35">
+                <h4>Headquarters</h4>
+                <address class="contact-info">
+                <p class="text-uppercase">9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.</p>
+                <dl class="list-terms-inline">
+                  <dt>Telephone</dt>
+                  <dd><a href="callto:#" class="link-secondary">+2348101118476</a></dd>
+                </dl>
+                <dl class="list-terms-inline">
+                  <dt>E-mail</dt>
+                  <dd><a href="#280b" class="link-primary">
+                      <span class="__cf_email__" data-cfemail="4c212d25200c282921232025222762233e2b">
+                        enenuwears@gmail.com</span></a></dd>
+                </dl>
+                </address>
+              </div>
+              <div class="cell-sm-6 cell-md-12 offset-top-35">
+                <h4>Support Centre</h4>
+                <address class="contact-info">
+                <p class="text-uppercase">9870 ST VINCENT PLACE, GLASGOW, DC 45 FR 45</p>
+                <dl class="list-terms-inline">
+                  <dt>Telephone</dt>
+                  <dd><a href="callto:#" class="link-secondary">+2348101118476</a></dd>
+                </dl>
+                <dl class="list-terms-inline">
+                  <dt>E-mail</dt>
+                  <dd><a href="#c5e6" class="link-primary">
+                      <span class="__cf_email__" data-cfemail="523f333b3e1236373f3d3e3b3c397c3d2035">
+                        enenuwears@gmail.com</span></a></dd>
+                </dl>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="rd-google-map">
+      <div class="overlay rd-google-map__model" onClick="style.pointerEvents='none'"></div>
+      <iframe  class="rd-google-map__model" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8404068987!2d-74.2581973675357!3d40.70583158554698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zVGjDoG5oIHBo4buRIE5ldyBZb3JrLCBUaeG7g3UgYmFuZyBOZXcgWW9yaw!5e0!3m2!1svi!2s!4v1480613299202" allowfullscreen></iframe>
+    </div>
+  </main>
+{% endblock %}
