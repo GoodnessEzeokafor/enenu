@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}
+Home
+{% endblock %}
 {% block content %}
       {% include "./include/navbar.html" %}
     
@@ -18,7 +21,7 @@
                           We believe in bringing you the luxury of having high quality and fashionable wears at a fair price
                         </p>
                       </div>
-                      <div data-caption-animate="fadeInUp" data-caption-delay="550s" class="offset-top-27"><a href="appointment.html" class="btn btn-primary">make An Appointment</a></div>
+                      <div data-caption-animate="fadeInUp" data-caption-delay="550s" class="offset-top-27"><a href="{% url 'contact'%}" class="btn btn-primary">make An Appointment</a></div>
                     </div>
                   </div>
                 </div>
@@ -35,7 +38,7 @@
                         PhotoGraphy                 
        </p>
                       </div>
-                      <div data-caption-animate="fadeInUp" data-caption-delay="550s" class="offset-top-27"><a href="appointment.html" class="btn btn-primary">make An Appointment</a></div>
+                      <div data-caption-animate="fadeInUp" data-caption-delay="550s" class="offset-top-27"><a href="{% url 'contact'%}" class="btn btn-primary">make An Appointment</a></div>
                     </div>
                   </div>
                 </div>
