@@ -5,7 +5,10 @@ from django.contrib.auth.models import User
 
 # from taggit.managers import TaggableManager
 # Create your models here.
-
+import sys
+from PIL import Image
+from io import BytesIO
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -40,6 +43,16 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
+
+    def save(self, *args, **kwargs):
+        imageTemporary = Image.open(self.image)
+        outputIOStream = BytesIO()		
+        imageTemproaryResized = imageTemporary.resize((717,515)) 
+        imageTemproaryResized.save(outputIOStream , format='JPEG', quality=85)
+        outputIOStream.seek(0)
+        self.image = InMemoryUploadedFile(outputIOStream,'ImageField', "%s.jpg" %self.image.name.split('.')[0], 'image/jpeg', sys.getsizeof(outputIOStream), None)
+        super(Post, self).save(*args, **kwargs)
+
 
 
 class Comment(models.Model):
