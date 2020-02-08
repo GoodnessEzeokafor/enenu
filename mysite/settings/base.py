@@ -45,7 +45,10 @@ INSTALLED_APPS = [
     # "mastering",
     # "account",
     # "custom_admin"
-    
+    #local app
+    "blog",
+            # 'taggit',
+
 ]
 
 MIDDLEWARE = [

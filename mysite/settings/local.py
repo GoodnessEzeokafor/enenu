@@ -40,7 +40,9 @@ INSTALLED_APPS = [
 
     #third party app
     'whitenoise.runserver_nostatic',
-
+#local app
+    "blog",
+    # "taggit"
 ]
 
 MIDDLEWARE = [
