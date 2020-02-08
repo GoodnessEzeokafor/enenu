@@ -1,0 +1,388 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include "../../main/include/navbar.html" %}
+
+<main class="page-content">
+    <section style="background-image: url({{post.image.url}});" class="section-30 section-sm-40 section-md-66 section-lg-bottom-90 bg-gray-dark page-title-wrap">
+      <div class="shell">
+        <div class="page-title">
+          <h2>Blog</h2>
+        </div>
+      </div>
+    </section>
+    <section class="section-60 section-sm-75 section-lg-100">
+      <div class="shell">
+        <div class="range">
+          <div class="cell-md-8 cell-lg-9">
+            <article class="post post-single">
+              <div class="post-image">
+                <figure><img src="{{post.image.url}}" alt="" width="870" height="412"/> </figure>
+              </div>
+              <div class="post-header">
+                <h4>{{post.title}}</h4>
+              </div>
+              <div class="post-meta">
+                <ul class="list-bordered-horizontal">
+                  <li>
+                    <dl class="list-terms-inline">
+                      <dt>Date</dt>
+                      <dd>
+                        <time datetime="{{post.publish}}">{{post.publish|date:"M d, Y"}} </time>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="list-terms-inline">
+                      <dt>Posted by</dt>
+                      <dd>
+                        {% if post.author.first_name %}  
+                            {{post.author.first_name}} {{post.author.last_name}}
+                        {% else %}
+                            {{post.author}}
+                        {% endif %}
+                    </dd>
+                    </dl>
+                  </li>
+                  <!-- <li>
+                    <dl class="list-terms-inline">
+                      <dt>Comments</dt>
+                      <dd>3</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="list-terms-inline">
+                      <dt>Category</dt>
+                      <dd>Marketing</dd>
+                    </dl>
+                  </li> -->
+                </ul>
+              </div>
+              <div class="divider-fullwidth bg-gray-light offset-top-15"></div>
+              <div class="post-body">
+                <p class="text-gray-base">
+                    {{post.body}}
+                    <!-- Perhaps you are a new entrepreneur about to launch a business or innovation you
+                     have been dreaming about for years. Or maybe you have an established business 
+                     and things are going well, or maybe even too well. In both instances you are 
+                     going to need capital – the “oxygen” that every business needs to grow and 
+                     prosper. -->
+                </p>
+                <!-- <p class="text-gray-base">So now you are writing your first business plan or touching up the old one in anticipation of raising capital. Capital can only come into a business in one of two ways. Capital that is generated internally through positive cash flow from business operations (e.g., selling stuff), or from external funding sources. The new entrepreneur is limited to only one option – external funding sources. The established business is hopefully generating positive cash flow, but may require additional capital. Which funding option is best? Is it best that the capital come from only one source, or does it make more sense for the capital to come from multiple sources? How do you decide?</p> -->
+                <!-- <div class="inset-sm-right-40 inset-lg-left-40 inset-lg-right-120 offset-top-30 offset-sm-top-50">
+                  <blockquote class="quote-minimal-bordered">
+                    <p> <q>Not only should you post interesting content, you should try to blog at least three times a week as a business.</q> </p>
+                  </blockquote>
+                </div> -->
+                <!-- <p class="offset-top-30 offset-sm-top-50 text-gray-base-08">How you decide to capitalize the business is called your capital formation strategy. There are undoubtedly a number of other factors to consider depending on your company’s current circumstances, and, quite importantly, where you want your company to go in the next few years. If you are still hesitating what development strategy to pick for your company.</p> -->
+              </div>
+              <!-- <div class="post-footer">
+                <h6 class="text-medium">Share this post:</h6>
+                <ul class="list-inline list-inline-xs">
+                  <li><a href="#" class="icon icon-xxs-small link-primary fa-facebook"></a></li>
+                  <li><a href="#" class="icon icon-xxs-small link-primary fa-twitter"></a></li>
+                  <li><a href="#" class="icon icon-xxs-small link-primary fa-google-plus"></a></li>
+                  <li><a href="#" class="icon icon-xxs-small link-primary fa-pinterest-p"></a></li>
+                </ul>
+              </div> -->
+            </article>
+            <!-- <div class="divider-fullwidth bg-gray-lighter offset-top-40"></div>
+            <div class="offset-top-40">
+              <h4>3 Comments</h4>
+              <div class="comment-list inset-sm-right-60 inset-md-right-30 inset-lg-right-100 offset-top-30">
+                <div class="comment-group">
+                  <article class="comment">
+                    <div class="unit unit-spacing-md unit-xs-horizontal">
+                      <div class="unit-left">
+                        <figure><img src="images/70x71.jpg" alt="" width="70" height="71"/> </figure>
+                      </div>
+                      <div class="unit-body">
+                        <div class="comment-body">
+                          <div class="comment-body-header">
+                            <div class="comment-meta">
+                              <p class="user">July Mao</p>
+                              <ul class="list-inline list-icon-meta">
+                                <li><a href="#" class="link-group link-group-baseline"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-thumb-up-outline"></span><span>Like</span></a></li>
+                                <li><a href="#" class="link-group"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-comment-outline"></span><span>Reply</span></a></li>
+                              </ul>
+                            </div>
+                            <div class="comment-time">
+                              <div class="object-inline">
+                                <time datetime="2016-02-16">Feb 16, 7:42 PM</time>
+                                <span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-clock"></span> </div>
+                            </div>
+                          </div>
+                          <div class="comment-body-text">
+                            <p class="text-gray-base">The topic you describe here is really important. I think it may be useful and interesting to many beginners in this sphere.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <div class="comment-group-reply">
+                    <article class="comment">
+                      <div class="unit unit-spacing-md unit-xs-horizontal">
+                        <div class="unit-left">
+                          <figure><img src="images/70x71.jpg" alt="" width="70" height="71"/> </figure>
+                        </div>
+                        <div class="unit-body">
+                          <div class="comment-body">
+                            <div class="comment-body-header">
+                              <div class="comment-meta">
+                                <p class="user">John doe</p>
+                                <ul class="list-inline list-icon-meta">
+                                  <li><a href="#" class="link-group link-group-baseline"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-thumb-up-outline"></span><span>Like</span></a></li>
+                                  <li><a href="#" class="link-group"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-comment-outline"></span><span>Reply</span></a></li>
+                                </ul>
+                              </div>
+                              <div class="comment-time">
+                                <div class="object-inline">
+                                  <time datetime="2016-02-16">Feb 16, 7:42 PM</time>
+                                  <span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-clock"></span> </div>
+                              </div>
+                            </div>
+                            <div class="comment-body-text">
+                              <p class="text-gray-base">Thank you for your opinion! I'm glad that you found this article interesting, and I hope to continue this topic in further publications.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="comment-group">
+                  <article class="comment">
+                    <div class="unit unit-spacing-md unit-xs-horizontal">
+                      <div class="unit-left">
+                        <figure><img src="images/post-4-70x71.jpg" alt="" width="70" height="71"/> </figure>
+                      </div>
+                      <div class="unit-body">
+                        <div class="comment-body">
+                          <div class="comment-body-header">
+                            <div class="comment-meta">
+                              <p class="user">Mila MOa</p>
+                              <ul class="list-inline list-icon-meta">
+                                <li><a href="#" class="link-group link-group-baseline"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-thumb-up-outline"></span><span>Like</span></a></li>
+                                <li><a href="#" class="link-group"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-comment-outline"></span><span>Reply</span></a></li>
+                              </ul>
+                            </div>
+                            <div class="comment-time">
+                              <div class="object-inline">
+                                <time datetime="2016-02-16">Feb 16, 7:42 PM</time>
+                                <span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-clock"></span> </div>
+                            </div>
+                          </div>
+                          <div class="comment-body-text">
+                            <p class="text-gray-base">Very useful post! Thanks for sharing! Now I’ll be planning my visit to your company to pick the best strategy for my business.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="offset-top-45">
+              <h4>Leave a comment</h4>
+              <div class="inset-sm-right-60 inset-md-right-30 inset-lg-right-100 offset-top-15 offset-lg-top-5">
+                <form class="rd-mailform form-classic form-classic-bordered label-outside">
+                  <div class="form-group">
+                    <label for="comment-message" class="text-regular form-label-outside">Message:</label>
+                    <textarea id="comment-message" name="message" data-constraints="@Required" class="form-control"></textarea>
+                  </div>
+                  <div class="offset-top-35">
+                    <button type="submit" style="min-width: 200px;" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div> -->
+          </div>
+          <!-- <div class="cell-md-4 cell-lg-3 offset-top-50 offset-md-top-0">
+            <div class="inset-md-left-15">
+              <div class="range">
+                <div class="cell-sm-6 cell-md-12">
+                  <form action="search-results.html" method="GET" class="rd-search rd-search-classic">
+                    <div class="form-group">
+                      <label for="rd-search-form-input-1" class="form-label">Search...</label>
+                      <input id="rd-search-form-input-1" type="text" name="s" autocomplete="off" class="form-control">
+                    </div>
+                    <button type="submit" class="rd-search-submit"></button>
+                  </form>
+                  <div class="offset-top-45">
+                    <h6 class="text-small-16 text-bold text-uppercase">Categories</h6>
+                    <ul class="list-marked-bordered offset-top-5">
+                      <li><a href="#"><span>Business</span><span class="text-dusty-gray">(2)</span></a></li>
+                      <li><a href="#"><span>Marketing</span><span class="text-dusty-gray">(5)</span></a></li>
+                      <li><a href="#"><span>Audit</span><span class="text-dusty-gray">(3)</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="offset-top-45">
+                    <h6 class="text-small-16 text-bold text-uppercase">Popular posts</h6>
+                    <div class="offset-top-22">
+                      <article class="post post-preview offset-top-15"><a href="blog-post.html">
+                        <div class="unit unit-horizontal unit-spacing-sm">
+                          <div class="unit-left">
+                            <figure class="post-image"><img src="images/70x70.jpg" alt="" width="70" height="70"/> </figure>
+                          </div>
+                          <div class="unit-body">
+                            <div class="post-header">
+                              <p>How is that Strategic Alliance Working Out?</p>
+                            </div>
+                            <div class="post-meta">
+                              <ul class="list-meta">
+                                <li>
+                                  <time datetime="2016-12-23">2016-02-04,Feb 4, 2016</time>
+                                </li>
+                                <li>4 Comment</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        </a></article>
+                      <article class="post post-preview offset-top-15"><a href="blog-post.html">
+                        <div class="unit unit-horizontal unit-spacing-sm">
+                          <div class="unit-left">
+                            <figure class="post-image"><img src="images/70x70.jpg" alt="" width="70" height="70"/> </figure>
+                          </div>
+                          <div class="unit-body">
+                            <div class="post-header">
+                              <p>The Fourth Industrial Revolution</p>
+                            </div>
+                            <div class="post-meta">
+                              <ul class="list-meta">
+                                <li>
+                                  <time datetime="2016-12-23">2016-02-04,Feb 4, 2016</time>
+                                </li>
+                                <li>4 Comment</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        </a></article>
+                      <article class="post post-preview offset-top-15"><a href="blog-post.html">
+                        <div class="unit unit-horizontal unit-spacing-sm">
+                          <div class="unit-left">
+                            <figure class="post-image"><img src="images/70x70.jpg" alt="" width="70" height="70"/> </figure>
+                          </div>
+                          <div class="unit-body">
+                            <div class="post-header">
+                              <p>Attracting &amp; Retaining the Best Employees</p>
+                            </div>
+                            <div class="post-meta">
+                              <ul class="list-meta">
+                                <li>
+                                  <time datetime="2016-12-23">2016-02-04,Feb 4, 2016</time>
+                                </li>
+                                <li>4 Comment</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        </a></article>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell-sm-6 cell-md-12 offset-top-50 offset-sm-top-0 offset-md-top-45">
+                  <h6 class="text-small-16 text-bold text-uppercase">Twitter feed</h6>
+                  <div data-twitter-username="templatemonster" class="twitter offset-top-30">
+                    <div data-twitter-type="tweet" class="twitter-item twitter-item-minimal">
+                      <div class="object-inline-baseline"><a href="#" data-url="href" class="icon icon-xxs icon-primary fa-twitter"></a>
+                        <time data-date="text,datetime" datetime="2016-04-20"></time>
+                      </div>
+                      <p data-tweet="text" class="tweet-text"></p>
+                      <p data-screen_name="text" data-user_name="href" class="tweet-user"></p>
+                    </div>
+                    <div data-twitter-type="tweet" class="twitter-item twitter-item-minimal">
+                      <div class="object-inline-baseline"><a href="#" data-url="href" class="icon icon-xxs icon-primary fa-twitter"></a>
+                        <time data-date="text,datetime" datetime="2016-04-20"></time>
+                      </div>
+                      <p data-tweet="text" class="tweet-text"></p>
+                      <p data-screen_name="text" data-user_name="href" class="tweet-user"></p>
+                    </div>
+                    <div data-twitter-type="tweet" class="twitter-item twitter-item-minimal">
+                      <div class="object-inline-baseline"><a href="#" data-url="href" class="icon icon-xxs icon-primary fa-twitter"></a>
+                        <time data-date="text,datetime" datetime="2016-04-20"></time>
+                      </div>
+                      <p data-tweet="text" class="tweet-text"></p>
+                      <p data-screen_name="text" data-user_name="href" class="tweet-user"></p>
+                    </div>
+                  </div>
+                  <div class="offset-top-45">
+                    <h6 class="text-small-16 text-bold text-uppercase">Tags</h6>
+                    <ul class="list-tag-blocks offset-top-22">
+                      <li><a href="#">Planning</a></li>
+                      <li><a href="#">support</a></li>
+                      <li><a href="#">business</a></li>
+                      <li><a href="#">company</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}
+
+{% comment %}
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load blog_tags %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mt-5">
+            <div class="card post_card" style="width:100%">
+                    <h4 class="card-title text-center">{{ post.title}}</h4>
+                   <div class="card-body">
+                       <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
+                       <p class="card-text">{{ post.body|markdown }}</p>
+                       <p class="lead mt-2">Published {{ post.publish }} by {{ post.author }}</p>
+                       <a href="{% url 'blog:post_share' post.id %}">Share This Post</a>
+                       <p class="tags">Tags: {{ post.tags.all|join:", " }}</p>
+                   </div>
+                </div>
+        {% with comments.count as total_comments %}
+                <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
+        {% endwith %}
+
+        {% for comment in comments %}
+            <div class="comments">
+                <p class="info">
+                    Comment {{ forloop.counter }} by {{ comment.name }} {{ comment.created }}
+                </p>
+                {{ comment.body|markdown }}
+            </div>
+        {% empty %}
+            <p>There are no comments yet!!</p>
+        {% endfor %}
+        {% if new_comments %}
+        <p>Comment Successfully created!!</p>
+        {% else %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ comment_form|crispy }}
+            <input type="submit" value="Add Comment" class="btn btn-success">
+        </form>
+        {% endif %}
+    </div>
+    <div class="col-md-4 mt-5">
+        <h3>Similar Posts</h3>
+        {% for post in similar_posts %}
+            <p>
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            </p>
+            {% empty %}
+            There are no similar posts yet
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+{% endcomment %}
